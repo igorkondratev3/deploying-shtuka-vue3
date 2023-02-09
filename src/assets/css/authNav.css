@@ -1,0 +1,24 @@
+.nav-auth__logout {
+  background-color: transparent;
+  color: #333;
+  border: 0;
+  cursor: pointer;
+  font-family: 'Pacifico', cursive;
+  font-size: 16px;
+}
+
+.nav-auth__login,
+.nav-auth__signup {
+  color: #333;
+  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-family: 'Pacifico', cursive;
+  font-size: 16px;
+}
+
+.nav-auth__login:hover,
+.nav-auth__signup:hover,
+.nav-auth__logout:hover {
+  color: red;
+}

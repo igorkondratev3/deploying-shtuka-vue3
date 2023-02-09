@@ -1,0 +1,26 @@
+.editor-button {
+  color: black;
+  cursor: default;
+  background-color: transparent;
+  line-height: 0;
+  border: 0;
+  margin-right: 3px;
+}
+
+.additionals-link__button {
+  color: black;
+  background-color: transparent;
+  cursor: default;
+  line-height: 0;
+  border: 0;
+  margin-right: 3px;
+}
+
+.note-editor__button {
+  color: black;
+  cursor: default;
+  background-color: transparent;
+  line-height: 0;
+  border: 0;
+  margin-right: 3px;
+}

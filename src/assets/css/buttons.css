@@ -1,0 +1,44 @@
+.round-button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: default;
+  z-index: 9;
+  border: 1px solid black;
+  user-select: none;
+}
+
+.create-additionals__button {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  color: rgb(239, 240, 236);
+  background-color: rgb(25, 25, 136);
+  border-radius: 10px;
+  border: 0;
+  width: 60%;
+  margin-left: 20%;
+  padding: 3px 0px;
+}
+
+.create-additionals__button:hover {
+  background-color: rgb(88, 88, 165);
+}
+
+.form-auth__button {
+  background: #027a7e;
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+}
+
+.disabled,
+.disabled:hover {
+  background-color: rgb(212, 208, 208);
+}

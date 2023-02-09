@@ -1,0 +1,35 @@
+.additionals__link {
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.user-additionals__link {
+  margin-top: 0;
+}
+
+.additionals-link__content {
+  font: oblique 18px Times New Roman;
+  text-align: center;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  color: black;
+  cursor: default;
+  border: 0.5px dashed black;
+  border-radius: 30px;
+  padding: 5px;
+  width: 170px;
+  height: 33px;
+  transition-property: border, background;
+  transition-duration: 6s, 3s;
+}
+
+.additionals-link__content:hover {
+  border: 0.5px solid black;
+  background: radial-gradient(transparent 50%, #8695a5);
+}
+
+@media (max-width: 1600px) {
+  .additionals__link {
+    margin-left: 5px;
+  }
+}
