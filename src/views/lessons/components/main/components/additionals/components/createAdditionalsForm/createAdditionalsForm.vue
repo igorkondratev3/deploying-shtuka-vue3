@@ -78,22 +78,22 @@
           class="create-additionals__input"
           id="description"
         />
-        <AddButtonAdditionalForm
-          v-if="props.isCreateForm"
-          :resourceAddress="resourceAddress"
-          :correctAdditionalValues="correctAdditionalValues"
-          @showError="(errorValue) => (error = errorValue)"
-          @closeCreateAdditionalForm="handleCloseFormFromButtons"
-        />
-        <EditButtonAdditionalForm
-          v-if="!props.isCreateForm"
-          :resourceAddress="resourceAddress"
-          :additionalID="props.additionalForEdit._id"
-          :correctAdditionalValues="correctAdditionalValues"
-          @showError="(errorValue) => (error = errorValue)"
-          @closeCreateAdditionalForm="handleCloseFormFromButtons"
-        />
       </form>
+      <AddButtonAdditionalForm
+        v-if="props.isCreateForm"
+        :resourceAddress="resourceAddress"
+        :correctAdditionalValues="correctAdditionalValues"
+        @showError="(errorValue) => (error = errorValue)"
+        @closeCreateAdditionalForm="handleCloseFormFromButtons"
+      />
+      <EditButtonAdditionalForm
+        v-if="!props.isCreateForm"
+        :resourceAddress="resourceAddress"
+        :additionalID="props.additionalForEdit._id"
+        :correctAdditionalValues="correctAdditionalValues"
+        @showError="(errorValue) => (error = errorValue)"
+        @closeCreateAdditionalForm="handleCloseFormFromButtons"
+      />
       <ErrorVue
         class="create-additionals__error"
         v-if="error"

@@ -9,6 +9,7 @@
   const props = defineProps({ circleAndGrade: Object });
   const storeLessonsCollection = lessonsCollection();
   const error = ref('');
+  const downloadWarningSeen = ref(false);
 
   setLessons();
   watch(props.circleAndGrade, () => {
@@ -21,11 +22,13 @@
         `circle${props.circleAndGrade.circle}grade${props.circleAndGrade.grade}`
       ]
     ) {
+      downloadWarningSeen.value = true;
       const lessons = await getLessons(
         props.circleAndGrade.circle,
         props.circleAndGrade.grade
       );
 
+      downloadWarningSeen.value = false;
       if (lessons.error) {
         error.value = lessons.error;
         return;
@@ -71,6 +74,13 @@
 </script>
 
 <template>
+   <div 
+    class="download-warning"
+    v-if="downloadWarningSeen"
+  >
+    Ожидается загрузка. Если к серверу длительное время не делалось обращений, 
+    то время ожидания может занять до 10-15 секунд. Приносим извенения за временные неудобства.
+  </div>
   <div class="lessons-list__lessons lessons">
     <div
       class="lessons__lesson lesson"
@@ -106,6 +116,18 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+  }
+
+  .download-warning {
+    align-self: center;
+    max-width: 450px;
+    padding: 20px;
+    margin-bottom: 16px;
+    border: 1px solid blue;
+    border-radius: 16px;
+    font: normal 24px 'Times New Roman';
+    text-align: justify;
+    color: rgb(98, 109, 139);
   }
 
   .lessons__lesson {
